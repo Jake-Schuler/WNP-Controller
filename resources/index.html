@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>WNP Controller</title>
+    <link rel="stylesheet" href="/css/styles.css">
+<!----    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> --->
+  </head>
+  <body>
+    <div id="neutralinoapp" class="center">
+        <div id="info">
+          <h1 id="song-title"></h1>
+          <h2 id="song-artist"></h2>
+        </div>
+        <div id="controls">
+          <button onclick="previousSong();"><i class="fas fa-backward"></i></span></button>
+          <button onclick="playPause();"><i class="fas fa-pause-circle"></i></button>
+          <button onclick="nextSong();"><i class="fas fa-forward"></i></button>
+        </div>
+      </div>
+    </div>
+    <a id="closeButton" title="Close WNP Controller" href="javascript:Neutralino.app.exit(0)">X</a>
+    <a href="javascript:Neutralino.os.open('https://www.wdym.info')">
+      <img title="WNP Controller By UnderCurve" id="watermark" src="/icons/appIcon.png">
+    </a>
+    <!-- Neutralino.js client. This file is gitignored, 
+        because `neu update` typically downloads it.
+        Avoid copy-pasting it. 
+        -->
+    <script src="/js/neutralino.js"></script>
+    <!-- Your app's source files -->
+    <script src="/js/main.js"></script>
+  </body>
+</html>
