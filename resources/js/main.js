@@ -84,7 +84,6 @@ function playPause() {
 
 function nextSong() {
     Neutralino.os.execCommand("wnpcli skip-next");
-    // wait 0.5 seconds before fetching data
 }
 
 async function fetchData() {

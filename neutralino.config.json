@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/neutralinojs/neutralinojs/main/schemas/neutralino.config.schema.json",
-  "applicationId": "js.neutralino.sample",
+  "applicationId": "app.hackclub.jschuler.WNPController",
   "version": "1.0.0",
   "defaultMode": "window",
   "port": 0,
@@ -18,18 +18,6 @@
     "os.*",
     "debug.log"
   ],
-  "globalVariables": {
-    "TEST1": "Hello",
-    "TEST2": [
-      2,
-      4,
-      5
-    ],
-    "TEST3": {
-      "value1": 10,
-      "value2": {}
-    }
-  },
   "modes": {
     "window": {
       "title": "WNP Controller",
@@ -42,11 +30,11 @@
       "alwaysOnTop": false,
       "icon": "/resources/icons/appIcon.png",
       "enableInspector": false,
-      "borderless": true,
+      "borderless": false,
       "maximize": false,
       "hidden": false,
-      "resizable": false,
-      "exitProcessOnClose": false
+      "resizable": true,
+      "exitProcessOnClose": true
     },
     "browser": {
       "globalVariables": {
