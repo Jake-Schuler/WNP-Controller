@@ -4,7 +4,7 @@ on:
   push:
     tags:
       - 'v*' # Triggers on versioned tags, e.g., v1.0.0
-  workflow_dispatch: # Allows manual triggering of the workflow
+  workflow_dispatch:
 
 jobs:
   build-and-release:
@@ -23,11 +23,26 @@ jobs:
         run: npm install --global @neutralinojs/neu
 
       - name: Build the Neutralino.js project
-        run: neu build
+        run: npx @neutralinojs/neu build
+
+      - name: Debug output files
+        run: |
+          echo "Checking output files..."
+          ls -R
+
+      - name: Prepare dist files
+        run: |
+          if [ -d dist ]; then
+            mkdir -p output
+            mv dist/* output/
+          else
+            echo "No files found in dist directory."
+            exit 1
+          fi
 
       - name: Archive dist files
         run: |
-          zip -r dist.zip dist
+          zip -r dist.zip output
 
       - name: Create GitHub Release
         id: create_release
