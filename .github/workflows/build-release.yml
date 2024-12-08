@@ -23,7 +23,7 @@ jobs:
         run: npm install --global @neutralinojs/neu
 
       - name: Build the Neutralino.js project
-        run: npx @neutralinojs/neu build
+        run: neu build
 
       - name: Prepare dist files
         run: |
