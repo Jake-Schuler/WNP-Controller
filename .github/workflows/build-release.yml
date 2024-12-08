@@ -25,16 +25,6 @@ jobs:
       - name: Build the Neutralino.js project
         run: neu build
 
-      - name: Prepare dist files
-        run: |
-          if [ -d dist ]; then
-            mkdir -p output
-            mv dist/* output/
-          else
-            echo "No files found in dist directory."
-            exit 1
-          fi
-
       - name: Archive dist files
         run: |
           zip -r dist.zip dist
