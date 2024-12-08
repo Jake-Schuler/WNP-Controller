@@ -27,8 +27,13 @@ jobs:
 
       - name: Prepare dist files
         run: |
-          mkdir -p dist
-          mv dist/* ./dist/ # Adjust paths if necessary
+          if [ -d dist ]; then
+            mkdir -p output
+            mv dist/* output/
+          else
+            echo "No files found in dist directory."
+            exit 1
+          fi
 
       - name: Archive dist files
         run: |
