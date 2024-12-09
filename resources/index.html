@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <title>WNP Controller</title>
     <link rel="stylesheet" href="/css/styles.css">
-<!----    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> --->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   </head>
   <body>
     <div id="neutralinoapp" class="center">
-        <div id="info">
+        <div>
           <h1 id="song-title"></h1>
           <h2 id="song-artist"></h2>
         </div>
         <div id="controls">
-          <button onclick="previousSong();"><i class="fas fa-backward"></i></span></button>
-          <button onclick="playPause();"><i class="fas fa-pause-circle"></i></button>
-          <button onclick="nextSong();"><i class="fas fa-forward"></i></button>
+          <button onclick="previousSong();"><i class='bx bx-rewind-circle' ></i></span></button>
+          <button onclick="playPause();"><i class='bx bx-pause-circle'></i></button>
+          <button onclick="nextSong();"><i class='bx bx-fast-forward-circle' ></i></button>
         </div>
       </div>
     </div>
@@ -23,10 +23,6 @@
     <a href="javascript:Neutralino.os.open('https://github.com/Jake-Schuler/WNP-Controller')">
       <img title="WNP Controller By Jake Schuler" id="watermark" src="/icons/appIcon.png">
     </a>
-    <!-- Neutralino.js client. This file is gitignored, 
-        because `neu update` typically downloads it.
-        Avoid copy-pasting it. 
-        -->
     <script src="/js/neutralino.js"></script>
     <!-- Your app's source files -->
     <script src="/js/main.js"></script>
